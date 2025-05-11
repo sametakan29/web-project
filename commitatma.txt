@@ -1,0 +1,3 @@
+git add .
+git commit -m 'ne yazarsan'
+git push origin -u master
