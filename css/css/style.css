@@ -12,3 +12,13 @@ body {
   line-height: 1.6;
 }
 h1{color:white}
+/* ==== Liste Stili ==== */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
