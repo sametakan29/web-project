@@ -1,24 +1,60 @@
-.hakkimda-p {  background-color: #4CAF50;
-  color: white;
-  padding: 30px 0;
-  text-align: center;}
-  
-header{text-align: center;}
+header
+{
+  text-align: center;
+}
 
-body {
+body 
+{
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   background-color: #1f1f1f;
   line-height: 1.6;
 }
-h1{color:white}
-/* ==== Liste Stili ==== */
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-  margin-top: 10px;
+h1
+{
+  color:white
+}
+section
+{
+  padding: 2rem;
+  max-width: 600px;
+  margin: 10px;
+}
+.hobi, .etkinlik 
+{
+  
+  font-size:large;
+  display: inline-block;
+  width: 45%;
+  margin: 2rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 100px;
+ }
+.galeri img 
+{
+  border-radius: 40px;
+}
+.linkler {
+  color:darkorange;
+  font-weight: bold;
+  text-decoration: none;
+}
+.linkler:hover{
+  color:black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-li {
-  margin-bottom: 8px;
+footer 
+{
+  text-align: center;
+  padding: 1rem;
+  background: #ddd;
+}
+.background-cv{
+   background-image:url("../../img/background2.jpg");/* Dosya uzantısını unutma! */
+  background-size: cover;       /* Resmin alanı kaplaması için */
+  background-repeat: no-repeat; /* Tekrar etmesin */
+  background-position:100%;  /* Ortalansın */
 }
