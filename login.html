@@ -39,6 +39,15 @@
       </ul>
   </div>
 </nav>
-    <h1 id="title">Merhaba</h1>
+    <h2>Öğrenci Girişi</h2>
+    <form action="login.php" method="POST">
+        <label for="username">Kullanıcı Adı (E-posta):</label><br />
+        <input type="email" id="username" name="username" placeholder="b1812100001@sakarya.edu.tr" required /><br /><br />
+        
+        <label for="password">Şifre (Öğrenci Numarası):</label><br />
+        <input type="password" id="password" name="password" placeholder="Örn: b1812100001" required /><br /><br />
+        
+        <input type="submit" value="Giriş Yap" />
+    </form>
 </body>
 </html>
