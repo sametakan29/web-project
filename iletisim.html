@@ -39,6 +39,41 @@
       </ul>
   </div>
 </nav>
-    <h1 id="title">Merhaba</h1>
+    <form action="submit" method="POST">
+      <!--metin kutusu--><br>
+      <label for="name">Adınız:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="surname">Soyadınız:</label>
+      <input type="text" id="surname" name="name" required><br>
+      <!--email--><br>
+      <label for="email">E-posta adresiniz:</label>
+      <input type="email" id="email" name="email" required><br>
+      <!--telefon--><br>
+      <label for="phone">Telefon Numaranız:</label>
+      <input type="tel" id="phone" name="phone" required><br>
+      <!--select kutusu--><br>
+      <label for="subject">Konu:</label>
+      <select id="subject" name="subject">
+        <option value="soru">Soru</option>
+        <option value="destek">Destek</option>
+        <option value="geriBildirim">Geri Bildirim</option>
+      </select><br><br>
+      <!--radio butonları-->
+      <p>Cinsiyet:
+      <input type="radio" id="male" name="gender" value="erkek">
+      <label for="male">Erkek</label>
+      <input type="radio" id="female" name="gender" value="kadın">
+      <label for="female">Kadın</label></p>
+      <!--check box-->
+      <p>İlgi Alanları:
+      <input type="checkbox" id="coding" name="interests" value="coding">
+      <label for="coding">Kodlama</label>
+      <input type="checkbox" id="music" name="interests" value="music">
+      <label for="music">Müzik</label></p><br>
+      <!--Mesaj-->
+      <label for="mesagge">Mesajınız:</label>
+      <textarea id="mesagge" name="message" rows="5" cols="30"></textarea>
+      <!--gönderme butonu-->
+      <button type="submit">Gönder</button>
 </body>
 </html>

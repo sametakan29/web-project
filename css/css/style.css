@@ -53,8 +53,50 @@ footer
   background: #ddd;
 }
 .background-cv{
-   background-image:url("../../img/background2.jpg");/* Dosya uzantısını unutma! */
+  background-image:url("../../img/background2.jpg");/* Dosya uzantısını unutma! */
   background-size: cover;       /* Resmin alanı kaplaması için */
   background-repeat: no-repeat; /* Tekrar etmesin */
   background-position:100%;  /* Ortalansın */
+}
+article {
+  background-color: #f5f5f5; /* açık gri arka plan */
+  padding: 16px;            /* iç boşluk */
+  margin-bottom: 20px;      /* bloklar arası boşluk */
+  border-radius: 10px;      /* köşeleri yuvarlat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* hafif gölge */
+  max-width: 400px;         /* isteğe bağlı genişlik sınırı */
+}
+.cv-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+.left, .right {
+  flex: 1;
+}
+
+.left {
+  max-width: 60%;
+
+}
+
+.right {
+  max-width: 35%;
+}
+.carousel-item img {
+    width: 100%;       /* Bulunduğu container kadar genişlik */
+    height: 300px;     /* Sabit yükseklik */
+    object-fit: cover; /* Taşarsa kırp, bozulmadan göster */
+  }
+
+  /* Carousel alanını da kontrol etmek istersen: */
+  #demo {
+    max-width: 800px;     /* İsteğe bağlı: slider genişliğini sınırlarsın */
+    margin: 0 auto;       /* Ortalarsın */
+  }
+  @media (max-width: 768px) {
+  .carousel-item img {
+    height: 180px;
+  }
 }
