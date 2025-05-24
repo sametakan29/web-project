@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html lang="tr-TR">
 <head>
-    <title>Hakkımda</title>
+    <title>İlgi Alanlarım</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
@@ -39,7 +39,33 @@
       </ul>
   </div>
 </nav>
-    <h1 id="title">Merhaba</h1>
-    <p>asasdasdad</p>
+    <h1>Film Bilgisi</h1>
+<div id="filmBilgisi">Yükleniyor...</div>
+
+<script>
+  const apiKey = 'ce8551a9'; // Buraya aldığın API key’i koy
+  const filmAdi = 'Scarface';
+
+  fetch(`https://www.omdbapi.com/?t=${filmAdi}&apikey=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      if(data.Response === "True") {
+        document.getElementById('filmBilgisi').innerHTML = `
+          <h2>${data.Title} (${data.Year})</h2>
+          <p><strong>Tür:</strong> ${data.Genre}</p>
+          <p><strong>Yönetmen:</strong> ${data.Director}</p>
+          <p><strong>Özet:</strong> ${data.Plot}</p>
+          <img src="${data.Poster}" alt="Film Posteri" width="200">
+        `;
+      } else {
+        document.getElementById('filmBilgisi').innerText = 'Film bulunamadı.';
+      }
+    })
+    .catch(error => {
+      document.getElementById('filmBilgisi').innerText = 'Hata oluştu.';
+      console.error('Hata:', error);
+    });
+</script>
+
 </body>
 </html>

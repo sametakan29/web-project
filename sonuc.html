@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Sonuçları</title>
+</head>
+<body>
+
+<h2>Gönderilen Bilgiler</h2>
+<div id="output"></div>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("formData"));
+
+  const output = document.getElementById("output");
+
+  if (data) {
+    for (let key in data) {
+      const p = document.createElement("p");
+      p.textContent = `${key.toUpperCase()}: ${data[key]}`;
+      output.appendChild(p);
+    }
+  } else {
+    output.textContent = "Gösterilecek veri yok.";
+  }
+</script>
+
+</body>
+</html>
